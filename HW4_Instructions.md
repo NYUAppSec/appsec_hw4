@@ -198,7 +198,9 @@ On NYU Classes, submit a link to your GitHub repository. The repository
 should be **private**, and you should add the instructor/TA's GitHub
 account as a contributor to give them access for grading.
 
-For this section, your instructor is: [FIXME]
+For this section, your instructor is: **moyix**
+
+Your TA is: **Manan-bit**
 
 The repository should contain all of the files of the Android project, plus the
 text files BUG.txt and difference.txt.
