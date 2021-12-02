@@ -131,7 +131,7 @@ will require changes to the following files:
 
 These changes should not be large. If you find yourself including new libraries,
 or writing more lines of code instead of just modifying code that already exits
-you are likely overthinking the problem.
+you are likely overthinking the problem. This one really is simple!
 
 ## Part 4: Oops, was that card yours?
 
@@ -160,7 +160,7 @@ by removing all metric collecting code, all areas that needlessly interact with
 sensors, and all permissions that are not needed for the basic functionality of
 the application (buying, browsing, and using gift cards).
 
-You should remove all necessary code in the following files:
+You should remove all necessary code in (at least) the following files:
 
 1. AndroidManifest.xml
 2. UserInfo.kt
@@ -194,17 +194,18 @@ Part 5 is worth 30 points:
 
 ## What to Submit
 
-On NYU Classes, submit a link to your GitHub repository. The repository
-should be **private**, and you should add the instructor/TA's GitHub
-account as a contributor to give them access for grading.
+On Brightspace, submit a link to your GitHub repository, which will 
+be a URL that looks like:
 
-For this section, your instructor is: **moyix**
+```
+https://github.com/NYUAppSec/homework-4-username
+```
 
-Your TA is: **Manan-bit**
+This allows us to know which GitHub username corresponds to which NYU
+account.
 
 The repository should contain all of the files of the Android project, plus the
 text files BUG.txt and difference.txt.
-
 
 ## Concluding Remarks
 
