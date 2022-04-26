@@ -31,16 +31,35 @@ a Virtual Machine running Linux.** Android studio works for Windows, Linux, Mac,
 and Chrome OS, so most of your platforms should be covered. If you have a
 different platform than listed above, please reach out to your instructor or TA.
 
-After installing Android studio, you should set up the Android Emulator. To do
-this open Android Studio and go to:
+We have prepared a visual walkthrough of the setup process on Mac (it should be
+very similar on Linux and Windows), which you can look through here:
+https://imgur.com/a/noDTMNj
+
+After installing Android Studio, you should import the project. You can do this
+from the "Welcome to Android Studio" window by clicking "More Actions" ->
+"Import Project (Gradle, Eclipse ADT, etc.)". This will open up a file chooser
+window. Navigate to the homework repository, and choose the `GiftcardSite`
+folder inside `Assignment4App`. **Important: don't try to import a different
+folder, like the top-level repository or the `Assignment4App` folder; it needs
+to be the `GiftcardSite` so that Android Studio will recognize the project
+correctly.**
+
+The project should now load in the IDE. You may see a dialog window that asks if
+you want to "Trust Gradle Project?" - if so, answer yes. Now give the IDE a
+minute or two to go download the project dependencies and set up the build
+system. When it finishes, you should see the file pane on the left side of the
+IDE populate with entries like "app", "manifests", and "Gradle Scripts".
+
+Next, you should set up the Android Emulator. To do this go to:
 
 ```
 Tools->AVD Manager
 ```
-This will open a new window. In this window you should see a button that says:
+
+This will open a new panel. In this panel you should see a button that says:
 
 ```
-+ Create Virtual Device...
+Create virtual device
 ```
 
 Click this button. Another window will open asking you to choose a device. We
@@ -60,19 +79,13 @@ Frame is checked. Then click on the button labeled Finish.
 Note that the first time you run the Android Emulator it will take some time.
 The emulator will set up the device for you, so let it do its work.
 
-After you have created an emulated Android device, it is time to import the
-project. Select the following:
+After you have created an emulated Android device, you can now build the project
+and launch it in the emulator by pressing the green play button in the Android
+Studio toolbar. The first time you launch the emulator it may take a while to
+start up, but it should eventually appear and then start the app.
 
-```
-File->New->Import Project
-```
-
-This will spawn a window that allows you to navigate your file system. Navigate
-to this folder, then select "GiftCardSite" which should appear with the default
-Android symbol next to it. This is the project you will be working on. After you
-import it you should be able to explore the code, run the emulator by pressing
-the green play button in the top right hand side of Android Studio, and then
-proceed to the next step.
+While the app is running, you may want to click on the "Run" tab on the bottom
+of the IDE to see debug messages printed out by the app from `Log.d()`.
 
 ## Part 2: It's all about intent
 
