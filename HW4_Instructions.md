@@ -84,16 +84,15 @@ and launch it in the emulator by pressing the green play button in the Android
 Studio toolbar. The first time you launch the emulator it may take a while to
 start up, but it should eventually appear and then start the app.
 
-While the app is running, you may want to click on the "Run" tab on the bottom
-of the IDE to see debug messages printed out by the app from `Log.d()`.
+While the app is running, you may want to click on the "Run" and "Logcat" tabs
+on the bottom of the IDE to see debug messages printed out by the app from
+`Log.d()`.
 
 ## Part 2: It's all about intent
 
 As you may remember from class, Android uses Intents to move in between parts of
 an application, or to communicate between applications (thus providing
 functionality the app doesn't naively support, like Web browsing).
-
-### Part 2.1: What's the difference?
 
 Intents, when not handled correctly, can cause problems. Take a look at the code
 on lines 69 to 73 of SecondFragment.kt and lines 68 to 70 of ThirdFragment.kt.
@@ -102,7 +101,7 @@ assignment, you should create a text file, called difference.txt, which answers
 the following questions in 3 sentences or less.
 
 1. What are the two types of Intents?
-2. Which of the two types of Intents are more secure?
+2. Which of the two types of Intents is (generally) more secure?
 3. What type of Intent is shown on lines 69 to 73 of SecondFragment.kt?
 4. What type of Intent is shown on lines 68 to 70 of ThirdFragment.kt?
 5. Which of these two Intents is the proper way to do an Intent?
@@ -110,18 +109,6 @@ the following questions in 3 sentences or less.
 As the last question above hinted, one of these two Intents is not correct.
 Fix the incorrect Intent, then in 3 sentences or less discuss in difference.txt
 which file you modified and why.
-
-### Part 2.2: Shutting out the world
-
-It seems that the developers of the application wanted to allow other
-applications to use Intents to launch the GiftCard application. However, this
-isn't what your company wants. At this moment your company does not anticipate
-a need for other applications to use Intents to launch Activities within the
-GiftCard application.
-
-For this part, you should remove the possibility of other applications using
-Intents to launch activities of your application. To do this, changes will need
-to be made to the AndroidManifest.xml file.
 
 ## Part 3: Can you read me out there?
 
@@ -131,7 +118,7 @@ as passwords, or modify data in transit without worry. Unfortunately, the
 developers of this application did not include any https encryption in calls to
 the REST API that it is using in the backend. For this part of the application,
 please secure all communication with the REST API using HTTPS. This modification
-will require changes to the following files:
+will require changes to at least the following files:
 
 1. SecondFragment.kt
 2. ThirdFragment.kt
@@ -153,13 +140,18 @@ do not belong to them. In a file called BUG.txt, explain why this vulnerability
 may be occurring, and how it can be fixed. Your explanation should be no larger
 than a paragraph.
 
-You can start looking for this vulnerability in the following files:
+To get an idea of how the app uses the REST API to invoke the use card
+functionality, you can look at the following files:
 
 1. UseCard.kt
 2. CardInterface.kt
 
-Think about how the application is telling the server which card to use, and how
-that may be problematic.
+Hints:
+
+* Think about how the application is telling the server which card to use, and how
+  that may be problematic.
+* You may want to try using `curl` (demoed in class) or the Python `requests`
+  library to interact with the API directly.
 
 ## Part 5: Privacy is Important
 
@@ -186,9 +178,8 @@ Total points: 100
 
 Part 2 is worth 30 points:
 
-* 10 points for answering the questions.
-* 10 points for fixing the correct intent.
-* 10 points for closing the application to outside intents.
+* 15 points for answering the questions.
+* 15 points for fixing the correct intent.
 
 Part 3 is worth 20 points:
 
