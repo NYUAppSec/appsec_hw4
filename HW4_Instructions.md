@@ -118,7 +118,7 @@ as passwords, or modify data in transit without worry. Unfortunately, the
 developers of this application did not include any https encryption in calls to
 the REST API that it is using in the backend. For this part of the application,
 please secure all communication with the REST API using HTTPS. This modification
-will require changes to at least the following files:
+will require changes to the following files:
 
 1. SecondFragment.kt
 2. ThirdFragment.kt
@@ -128,6 +128,8 @@ will require changes to at least the following files:
 6. GetCard.kt
 7. CardRecyclerViewAdapter.kt
 8. RecyclerViewAdapter.kt
+9. Reporter.kt
+10. strings.xml
 
 These changes should not be large. If you find yourself including new libraries,
 or writing more lines of code instead of just modifying code that already exits
@@ -153,6 +155,10 @@ Hints:
 * You may want to try using `curl` (demoed in class) or the Python `requests`
   library to interact with the API directly.
 
+**Note**: You do *not* need to actually fix the vulnerability. In fact, once
+you understand the vulnerability in detail, you should be able to see why it
+cannot be fixed just by changing the client-side code.
+
 ## Part 5: Privacy is Important
 
 Many modern Android applications collect large amounts of privacy-invasive
@@ -176,14 +182,19 @@ You should remove all necessary code in (at least) the following files:
 
 Total points: 100
 
-Part 2 is worth 30 points:
+Part 1 is worth 10 points:
 
-* 15 points for answering the questions.
-* 15 points for fixing the correct intent.
+* You get these points automatically for completing the setup; you do not need
+  to submit anything.
+
+Part 2 is worth 20 points:
+
+* 10 points for answering the questions.
+* 10 points for fixing the correct intent.
 
 Part 3 is worth 20 points:
 
-* 2.5 points for each file correctly modified to use HTTPS.
+* 2 points for each file correctly modified to use HTTPS.
 
 Part 4 is worth 20 points:
 
@@ -198,15 +209,7 @@ Part 5 is worth 30 points:
 
 ## What to Submit
 
-On Brightspace, submit a link to your GitHub repository, which will 
-be a URL that looks like:
-
-```
-https://github.com/NYUAppSec/homework-4-username
-```
-
-This allows us to know which GitHub username corresponds to which NYU
-account.
+Remember to commit all your changes and push them to your repository.
 
 The repository should contain all of the files of the Android project, plus the
 text files BUG.txt and difference.txt.
