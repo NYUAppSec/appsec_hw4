@@ -208,7 +208,8 @@ Part 1 is worth 10 points:
 
 Part 2 is worth 20 points:
 
-* 10 points for fixing the correct intent.
+* 5 points for answering the questions.
+* 5 points for fixing the correct intent.
 * 10 points for correcting the Manifest.
 
 Part 3 is worth 20 points:
