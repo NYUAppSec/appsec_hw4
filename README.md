@@ -90,7 +90,7 @@ on the bottom of the IDE to see debug messages printed out by the app from
 To remain consistent with our other coding assignments, please complete the following:
 * At least one signed git commit
 * Use GitHub Actions to automate testing of your code.
-  You can look at the template [here](https://github.com/actions/starter-workflows/blob/main/ci/android.yml)
+  You can look at the template [here](https://github.com/actions/starter-workflows/blob/main/ci/android.yml).
   There is no need to write unit tests (although you can if you want to!).
   But I expect at a minimum to use Gradle to automatically test if your code can compile. 
 * Read this [document](https://docs.gradle.org/current/userguide/command_line_interface.html) to have a better understanding of what Gradle does.
@@ -229,7 +229,10 @@ Part 5 is worth 30 points:
 
 ## What to Submit
 
-In order to submit your code, please only submit a file called `git_link.txt` that contains the name of your repository. 
+The repository should contain all the files of the Android project, plus the
+text files BUG.txt and difference.txt.
+
+To submit your code, please submit a file called `git_link.txt` that contains the name of your repository. 
 For example, if your GitHub account username is exampleaccount, you would submit a text file named `git_link.txt` to 
 Gradescope with only one line that reads the following:
 
@@ -237,8 +240,14 @@ Gradescope with only one line that reads the following:
 
 The auto-grader will automatically find your code and download it.
 
-The repository should contain all the files of the Android project, plus the
-text files BUG.txt and difference.txt.
+The TA will be looking for the following files on your Gradescope:
+* `git_link.txt`
+* `difference.txt`
+* `BUG.txt`  
+Having the write-ups be submitted would make it easier for the TA to grade as
+the TA would not need to go to your GitHub repository. 
+Please be sure to have your written parts in your repository too.
+
 
 ## Concluding Remarks
 
