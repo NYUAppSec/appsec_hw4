@@ -20,7 +20,7 @@ is ready to ship the application.
 Like previous assignments, you are required to use the Git VCS. Start by cloning
 this repository onto your machine, as you have done previously.
 
-Next you will need to install Android Studio at the following link:
+Next, you will need to install Android Studio at the following link:
 
 ```
 https://developer.android.com/studio/
@@ -32,23 +32,21 @@ and Chrome OS, so most of your platforms should be covered. If you have a
 different platform than listed above, please reach out to your instructor or TA.
 
 We have prepared a visual walkthrough of the setup process on Mac (it should be
-very similar on Linux and Windows), which you can look through here:
-https://imgur.com/a/noDTMNj
+very similar on Linux and Windows), which you can look through [here](https://imgur.com/a/noDTMNj)
 
 After installing Android Studio, you should import the project. You can do this
 from the "Welcome to Android Studio" window by clicking "More Actions" ->
 "Import Project (Gradle, Eclipse ADT, etc.)". This will open up a file chooser
 window. Navigate to the homework repository, and choose the `GiftcardSite`
-folder inside `Assignment4App`. **Important: don't try to import a different
-folder, like the top-level repository or the `Assignment4App` folder; it needs
-to be the `GiftcardSite` so that Android Studio will recognize the project
+folder inside `appsec_hw4`. **Important: don't try to import a different folder; 
+it needs it to be the `GiftcardSite` so that Android Studio will recognize the project
 correctly.**
 
 The project should now load in the IDE. You may see a dialog window that asks if
 you want to "Trust Gradle Project?" - if so, answer yes. Now give the IDE a
 minute or two to go download the project dependencies and set up the build
 system. When it finishes, you should see the file pane on the left side of the
-IDE populate with entries like "app", "manifests", and "Gradle Scripts".
+IDE populated with entries like "app", "manifests", and "Gradle Scripts".
 
 Next, you should set up the Android Emulator. To do this go to:
 
@@ -56,7 +54,7 @@ Next, you should set up the Android Emulator. To do this go to:
 Tools->AVD Manager
 ```
 
-This will open a new panel. In this panel you should see a button that says:
+This will open a new panel. In this panel, you should see a button that says:
 
 ```
 Create virtual device
@@ -69,7 +67,7 @@ recommend downloading the image labeled R, which has an API Level of 30, the
 x86 ABI, and a Target of Android 11.0 (Google Play). You may need to download
 this image before you can use it by clicking the Download link next to the image
 name. This will open a window that will ask you to accept the terms and
-conditions. After you accept the image will download.
+conditions. After you accept, the image will download.
 
 After downloading the image, the Android Virtual Device Manager will ask you to
 name the virtual device and select between Portrait or Landscape. Ensure
@@ -88,33 +86,54 @@ While the app is running, you may want to click on the "Run" and "Logcat" tabs
 on the bottom of the IDE to see debug messages printed out by the app from
 `Log.d()`.
 
+## What to submit
+To remain consistent with our other coding assignments, please complete the following:
+* At least one signed git commit
+* Use GitHub Actions to automate testing of your code.
+  You can look at the template [here](https://github.com/actions/starter-workflows/blob/main/ci/android.yml)
+  There is no need to write unit tests (although you can if you want to!).
+  But I expect at a minimum to use Gradle to automatically test if your code can compile. 
+* Read this [document](https://docs.gradle.org/current/userguide/command_line_interface.html) to have a better understanding of what Gradle does.
+
 ## Part 2: It's all about intent
 
 As you may remember from class, Android uses Intents to move in between parts of
 an application, or to communicate between applications (thus providing
 functionality the app doesn't naively support, like Web browsing).
 
+### Part 2.1: What is the difference?
 Intents, when not handled correctly, can cause problems. Take a look at the code
 on lines 69 to 73 of SecondFragment.kt and lines 68 to 70 of ThirdFragment.kt.
 These are two different ways of handling intents. For this portion of the
 assignment, you should create a text file, called difference.txt, which answers
-the following questions in 3 sentences or less.
+the following questions in 3 sentences or fewer.
 
 1. What are the two types of Intents?
-2. Which of the two types of Intents is (generally) more secure?
+2. Which of these Intents are (generally) more secure?
 3. What type of Intent is shown on lines 69 to 73 of SecondFragment.kt?
 4. What type of Intent is shown on lines 68 to 70 of ThirdFragment.kt?
 5. Which of these two Intents is the proper way to do an Intent?
 
 As the last question above hinted, one of these two Intents is not correct.
-Fix the incorrect Intent, then in 3 sentences or less discuss in difference.txt
+Fix the incorrect Intent, then in 3 sentences or fewer discuss in difference.txt
 which file you modified and why.
+
+## Part 2.2: Shutting out the world
+It seems that the developers of the application wanted to allow other applications to use Intents to launch 
+the GiftCard application.
+However, this isn't what your company wants. 
+At this moment, your company does not anticipate a need for other applications to
+use Intents to launch Activities within the GiftCard application.
+
+For this part, you should remove the possibility of other applications using 
+Intents to launch activities of your application.
+To do this, changes will need to be made to the AndroidManifest.xml file.
 
 ## Part 3: Can you read me out there?
 
 Communication of data in transit is especially important. If communications are
 not secured in transit, then network adversaries can read confidential data such
-as passwords, or modify data in transit without worry. Unfortunately, the
+as passwords, or modify data in transit without a worry. Unfortunately, the
 developers of this application did not include any https encryption in calls to
 the REST API that it is using in the backend. For this part of the application,
 please secure all communication with the REST API using HTTPS. This modification
@@ -132,7 +151,7 @@ will require changes to the following files:
 10. strings.xml
 
 These changes should not be large. If you find yourself including new libraries,
-or writing more lines of code instead of just modifying code that already exits
+or writing more lines of code instead of just modifying code that already exists, 
 you are likely overthinking the problem. This one really is simple!
 
 ## Part 4: Oops, was that card yours?
@@ -166,8 +185,8 @@ metrics about their users. This is very problematic, since many users carry
 their devices at all times, and are unaware of the implications of granting a
 permission.
 
-In this section your goal is to remove all privacy invasive code. This is done
-by removing all metric collecting code, all areas that needlessly interact with
+In this section, your goal is to remove all privacy invasive code.
+This is done by removing all metric collecting code, all areas that needlessly interact with
 sensors, and all permissions that are not needed for the basic functionality of
 the application (buying, browsing, and using gift cards).
 
@@ -184,13 +203,14 @@ Total points: 100
 
 Part 1 is worth 10 points:
 
-* You get these points automatically for completing the setup; you do not need
-  to submit anything.
+* 5 points for at least one signed git commit
+* 5 points for using GitHub actions to confirm the Android code compiles
 
 Part 2 is worth 20 points:
 
-* 10 points for answering the questions.
-* 10 points for fixing the correct intent.
+* 5 points for answering the questions.
+* 5 points for fixing the correct intent.
+* 10 points for correcting the Manifest.
 
 Part 3 is worth 20 points:
 
@@ -209,9 +229,15 @@ Part 5 is worth 30 points:
 
 ## What to Submit
 
-Remember to commit all your changes and push them to your repository.
+In order to submit your code, please only submit a file called `git_link.txt` that contains the name of your repository. 
+For example, if your GitHub account username is exampleaccount, you would submit a text file named `git_link.txt` to 
+Gradescope with only one line that reads the following:
 
-The repository should contain all of the files of the Android project, plus the
+    assignment-4-exampleaccount
+
+The auto-grader will automatically find your code and download it.
+
+The repository should contain all the files of the Android project, plus the
 text files BUG.txt and difference.txt.
 
 ## Concluding Remarks
