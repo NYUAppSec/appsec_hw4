@@ -1,5 +1,15 @@
 # Homework 4: Mobile Mess
 
+## Get Latest Updates
+Use the following commands to pull the latest updates.
+
+```bash
+git remote add upstream https://github.com/NYUAppSec/appsec_hw4
+git fetch upstream
+git merge upstream/master --allow-unrelated-histories
+git push
+```
+
 ## Introduction
 
 Your organization has decided that they want to make an Android application
@@ -51,7 +61,7 @@ IDE populated with entries like "app", "manifests", and "Gradle Scripts".
 Next, you should set up the Android Emulator. To do this go to:
 
 ```
-Tools->AVD Manager
+Tools->Device Manager
 ```
 
 This will open a new panel. In this panel, you should see a button that says:
@@ -106,7 +116,7 @@ Intents, when not handled correctly, can cause problems. Take a look at the code
 on lines 69 to 73 of SecondFragment.kt and lines 68 to 70 of ThirdFragment.kt.
 These are two different ways of handling intents. For this portion of the
 assignment, you should create a text file, called difference.txt, which answers
-the following questions in 3 sentences or fewer.
+the following questions in three sentences or fewer.
 
 1. What are the two types of Intents?
 2. Which of these Intents are (generally) more secure?
@@ -115,7 +125,7 @@ the following questions in 3 sentences or fewer.
 5. Which of these two Intents is the proper way to do an Intent?
 
 As the last question above hinted, one of these two Intents is not correct.
-Fix the incorrect Intent, then in 3 sentences or fewer discuss in difference.txt
+Fix the incorrect Intent, then in three sentences or fewer discuss in difference.txt
 which file you modified and why.
 
 ## Part 2.2: Shutting out the world
@@ -152,7 +162,7 @@ will require changes to the following files:
 
 These changes should not be large. If you find yourself including new libraries,
 or writing more lines of code instead of just modifying code that already exists, 
-you are likely overthinking the problem. This one really is simple!
+you are likely overthinking the problem. This one is not complicated!
 
 ## Part 4: Oops, was that card yours?
 
@@ -204,7 +214,7 @@ Total points: 100
 Part 1 is worth 10 points:
 
 * 5 points for at least one signed git commit
-* 5 points for using GitHub actions to confirm the Android code compiles
+* 5 points for using GitHub actions to confirm the Android code can compile
 
 Part 2 is worth 20 points:
 
