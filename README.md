@@ -200,7 +200,7 @@ This is done by removing all metric collecting code, all areas that needlessly i
 sensors, and all permissions that are not needed for the basic functionality of
 the application (buying, browsing, and using gift cards).
 
-You should remove all necessary code in (at least) the following files:
+You should remove all unnecessary code in (at least) the following files:
 
 1. AndroidManifest.xml
 2. UserInfo.kt
