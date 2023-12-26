@@ -8,9 +8,9 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
+//import android.location.Location
+//import android.location.LocationListener
+//import android.location.LocationManager
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -29,7 +29,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class CardScrollingActivity : AppCompatActivity(), SensorEventListener, LocationListener {
+class CardScrollingActivity : AppCompatActivity(), SensorEventListener{
     private var loggedInUser : User? = null
     private lateinit var sensorManager: SensorManager
     private var mAccel: Sensor? = null;
@@ -38,11 +38,11 @@ class CardScrollingActivity : AppCompatActivity(), SensorEventListener, Location
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val locationPermissionCode = 2
-        var locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), locationPermissionCode)
-        }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
+//        var locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+//        if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
+//            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), locationPermissionCode)
+//        }
+//        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         mAccel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
         setContentView(R.layout.activity_scrolling)
@@ -93,33 +93,33 @@ class CardScrollingActivity : AppCompatActivity(), SensorEventListener, Location
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
-    override fun onLocationChanged(location: Location) {
-        var userInfoContainer = UserInfoContainer(location, null, loggedInUser?.token)
-        var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("https://appsec.moyix.net").addConverterFactory(
-            GsonConverterFactory.create())
-        var retrofit: Retrofit = builder.build()
-        var client: UserInfo = retrofit.create(UserInfo::class.java)
-        client.postInfo(userInfoContainer, loggedInUser?.token)?.enqueue(object: Callback<User?> {
-            override fun onFailure(call: Call<User?>, t: Throwable) {
-                Log.d("Metric Failure", "Metric Failure in onFailure")
-                Log.d("Metric Failure", t.message.toString())
-
-            }
-
-            override fun onResponse(call: Call<User?>, response: Response<User?>) {
-                if (!response.isSuccessful) {
-                    Log.d("Metric Failure", "Metric failure. Yay.")
-                } else {
-                    Log.d("Metric Success", "Metric success. Boo.")
-                    Log.d("Metric Success", "Token:${userInfoContainer.token}")
-                }
-            }
-        })
-    }
+//    override fun onLocationChanged(location: Location) {
+//        var userInfoContainer = UserInfoContainer(location, null, loggedInUser?.token)
+//        var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("https://appsec.moyix.net").addConverterFactory(
+//            GsonConverterFactory.create())
+//        var retrofit: Retrofit = builder.build()
+//        var client: UserInfo = retrofit.create(UserInfo::class.java)
+//        client.postInfo(userInfoContainer, loggedInUser?.token)?.enqueue(object: Callback<User?> {
+//            override fun onFailure(call: Call<User?>, t: Throwable) {
+//                Log.d("Metric Failure", "Metric Failure in onFailure")
+//                Log.d("Metric Failure", t.message.toString())
+//
+//            }
+//
+//            override fun onResponse(call: Call<User?>, response: Response<User?>) {
+//                if (!response.isSuccessful) {
+//                    Log.d("Metric Failure", "Metric failure. Yay.")
+//                } else {
+//                    Log.d("Metric Success", "Metric success. Boo.")
+//                    Log.d("Metric Success", "Token:${userInfoContainer.token}")
+//                }
+//            }
+//        })
+//    }
 
     override fun onSensorChanged(event: SensorEvent?) {
         if (event != null) {
-            var userInfoContainer = UserInfoContainer(null, event.values[0].toString(), loggedInUser?.token)
+            var userInfoContainer = UserInfoContainer( event.values[0].toString(), loggedInUser?.token)
             var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("https://appsec.moyix.net").addConverterFactory(
                 GsonConverterFactory.create())
             var retrofit: Retrofit = builder.build()
