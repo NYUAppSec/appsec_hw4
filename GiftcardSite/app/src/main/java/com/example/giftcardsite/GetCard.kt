@@ -60,7 +60,7 @@ class GetCard : AppCompatActivity() {
                         Log.d("Buy Success", "Buy success. Boo.")
                         Log.d("Buy Success", "Token:$token")
                     }
-                    var intent = Intent(outerContext, ProductScrollingActivity::class.java)
+                    var intent = Intent(outerContext, MainActivity::class.java)
                     //intent.type = "text/giftcards"
                     intent.putExtra("User", loggedInUser);
                     startActivity(intent)

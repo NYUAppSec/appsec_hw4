@@ -65,7 +65,7 @@ class ThirdFragment : Fragment() {
                         loggedInUser = response.body()
                         Log.d("Login Success", "Login success. Boo.")
                         Log.d("Login Success", "Token:" + loggedInUser?.token.toString())
-                        var intent = Intent(activity, ProductScrollingActivity::class.java)
+                        var intent = Intent(activity, MainActivity::class.java)
                         intent.putExtra("User", loggedInUser);
                         startActivity(intent)
                     }
