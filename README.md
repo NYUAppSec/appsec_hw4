@@ -109,7 +109,7 @@ To remain consistent with our other coding assignments, please complete the foll
 If you’d like to submit this part, push the `hw4p1handin` tag with the following:
 
     git tag -a -m "Completed hw4 part1." hw4p1handin
-    git push origin main
+    git push origin master
     git push origin hw4p1handin
 
 ## Part 2: It's all about intent
@@ -150,7 +150,7 @@ To do this, changes will need to be made to the AndroidManifest.xml file.
 If you’d like to submit this part, push the `hw4p2handin` tag with the following:
 
     git tag -a -m "Completed hw4 part2." hw4p2handin
-    git push origin main
+    git push origin master
     git push origin hw4p2handin
 
 ## Part 3: Can you read me out there?
@@ -182,7 +182,7 @@ you are likely overthinking the problem. This one is not complicated!
 If you’d like to submit this part, push the `hw4p3handin` tag with the following:
 
     git tag -a -m "Completed hw4 part3." hw4p3handin
-    git push origin main
+    git push origin master
     git push origin hw4p3handin
 
 ## Part 4: Oops, was that card yours?
@@ -213,7 +213,7 @@ cannot be fixed just by changing the client-side code.
 If you’d like to submit this part, push the `hw4p4handin` tag with the following:
 
     git tag -a -m "Completed hw4 part4." hw4p4handin
-    git push origin main
+    git push origin master
     git push origin hw4p4handin
 
 ## Part 5: Privacy is Important
@@ -239,7 +239,7 @@ You should remove all unnecessary code in (at least) the following files:
 If you’d like to submit this part, push the `hw4p5handin` tag with the following:
 
     git tag -a -m "Completed hw4 part5." hw4p5handin
-    git push origin main
+    git push origin master
     git push origin hw4p5handin
 
 ## Grading
