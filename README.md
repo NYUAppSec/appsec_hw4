@@ -105,6 +105,13 @@ To remain consistent with our other coding assignments, please complete the foll
   But I expect at a minimum to use Gradle to automatically test if your code can compile. 
 * Read this [document](https://docs.gradle.org/current/userguide/command_line_interface.html) to have a better understanding of what Gradle does.
 
+### Submission
+If you’d like to submit this part, push the `hw4p1handin` tag with the following:
+
+    git tag -a -m "Completed hw4 part1." hw4p1handin
+    git push origin main
+    git push origin hw4p1handin
+
 ## Part 2: It's all about intent
 
 As you may remember from class, Android uses Intents to move in between parts of
@@ -139,6 +146,13 @@ For this part, you should remove the possibility of other applications using
 Intents to launch activities of your application.
 To do this, changes will need to be made to the AndroidManifest.xml file.
 
+### Submission
+If you’d like to submit this part, push the `hw4p2handin` tag with the following:
+
+    git tag -a -m "Completed hw4 part2." hw4p2handin
+    git push origin main
+    git push origin hw4p2handin
+
 ## Part 3: Can you read me out there?
 
 Communication of data in transit is especially important. If communications are
@@ -164,6 +178,13 @@ These changes should not be large. If you find yourself including new libraries,
 or writing more lines of code instead of just modifying code that already exists, 
 you are likely overthinking the problem. This one is not complicated!
 
+### Submission
+If you’d like to submit this part, push the `hw4p3handin` tag with the following:
+
+    git tag -a -m "Completed hw4 part3." hw4p3handin
+    git push origin main
+    git push origin hw4p3handin
+
 ## Part 4: Oops, was that card yours?
 
 There exists a vulnerability in the REST API that allows users to GiftCards that
@@ -188,6 +209,13 @@ Hints:
 you understand the vulnerability in detail, you should be able to see why it
 cannot be fixed just by changing the client-side code.
 
+### Submission
+If you’d like to submit this part, push the `hw4p4handin` tag with the following:
+
+    git tag -a -m "Completed hw4 part4." hw4p4handin
+    git push origin main
+    git push origin hw4p4handin
+
 ## Part 5: Privacy is Important
 
 Many modern Android applications collect large amounts of privacy-invasive
@@ -206,6 +234,13 @@ You should remove all necessary code in (at least) the following files:
 2. UserInfo.kt
 3. CardScrollingActivity.kt
 4. ProductScrollingActivity.kt
+
+### Submission
+If you’d like to submit this part, push the `hw4p5handin` tag with the following:
+
+    git tag -a -m "Completed hw4 part5." hw4p5handin
+    git push origin main
+    git push origin hw4p5handin
 
 ## Grading
 
