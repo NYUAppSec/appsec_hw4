@@ -6,7 +6,7 @@ Use the following commands to pull the latest updates.
 ```bash
 git remote add upstream https://github.com/NYUAppSec/appsec_hw4
 git fetch upstream
-git merge upstream/master --allow-unrelated-histories
+git merge upstream/main --allow-unrelated-histories
 git push
 ```
 
@@ -109,7 +109,7 @@ To remain consistent with our other coding assignments, please complete the foll
 If you’d like to submit this part, push the `hw4p1handin` tag with the following:
 
     git tag -a -m "Completed hw4 part1." hw4p1handin
-    git push origin master
+    git push origin main
     git push origin hw4p1handin
 
 ## Part 2: It's all about intent
@@ -150,7 +150,7 @@ To do this, changes will need to be made to the AndroidManifest.xml file.
 If you’d like to submit this part, push the `hw4p2handin` tag with the following:
 
     git tag -a -m "Completed hw4 part2." hw4p2handin
-    git push origin master
+    git push origin main
     git push origin hw4p2handin
 
 ## Part 3: Can you read me out there?
@@ -182,7 +182,7 @@ you are likely overthinking the problem. This one is not complicated!
 If you’d like to submit this part, push the `hw4p3handin` tag with the following:
 
     git tag -a -m "Completed hw4 part3." hw4p3handin
-    git push origin master
+    git push origin main
     git push origin hw4p3handin
 
 ## Part 4: Oops, was that card yours?
@@ -213,7 +213,7 @@ cannot be fixed just by changing the client-side code.
 If you’d like to submit this part, push the `hw4p4handin` tag with the following:
 
     git tag -a -m "Completed hw4 part4." hw4p4handin
-    git push origin master
+    git push origin main
     git push origin hw4p4handin
 
 ## Part 5: Privacy is Important
@@ -239,7 +239,7 @@ You should remove all unnecessary code in (at least) the following files:
 If you’d like to submit this part, push the `hw4p5handin` tag with the following:
 
     git tag -a -m "Completed hw4 part5." hw4p5handin
-    git push origin master
+    git push origin main
     git push origin hw4p5handin
 
 ## Grading
@@ -285,14 +285,11 @@ Gradescope with only one line that reads the following:
 
 The auto-grader will automatically find your code and download it.
 
-The TA will be looking for the following files on your Gradescope:
-* `git_link.txt`
+The TA will also be looking for the following files on your Gradescope:
 * `difference.txt`
 * `BUG.txt`  
-Having the write-ups be submitted would make it easier for the TA to grade as
-the TA would not need to go to your GitHub repository. 
+Having the write-ups uploaded makes it easier for the TA to grade the write-up as it saves them time traversing your GitHub repository.
 Please be sure to have your written parts in your repository too.
-
 
 ## Concluding Remarks
 
