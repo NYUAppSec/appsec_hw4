@@ -33,6 +33,6 @@ class ProductInterfaceTest {
         // Log the formatted string
         println("ProductInterfaceTest results:\n$result")
 
-        assertEquals("[Product(productId=1, productName=Product 1, productImageLink=image1.jpg, recommendedPrice=10, description=Description 1), Product(productId=2, productName=Product 2, productImageLink=image2.jpg, recommendedPrice=20, description=Description 2)]", "$result")
+        assertEquals(products, result)
     }
 }

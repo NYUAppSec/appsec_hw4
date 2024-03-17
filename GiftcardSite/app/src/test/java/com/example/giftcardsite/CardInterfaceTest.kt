@@ -28,10 +28,11 @@ class CardInterfaceTest {
         every { mockCardInterface.useCard(cardNumber, authHeader) } returns mockCall
         every { mockCall.execute() } returns Response.success(card)
 
-        val result = mockCardInterface.useCard(cardNumber, authHeader)?.execute()?.body()
+        val result = mockCardInterface.useCard(cardNumber, authHeader).execute().body()
         println("testUseCard results:\n$result")
-        assertEquals("Card(data=data, product=Product(productId=1, productName=product_name, productImageLink=image_path, recommendedPrice=10, description=description), amount=100.0, used=false, id=1)", "$result")
+        assertEquals(card, result)
     }
+
     @Test
     fun testGetCards() {
         val authHeader = "Example auth header"
@@ -41,9 +42,9 @@ class CardInterfaceTest {
         every { mockCardInterface.getCards(authHeader) } returns mockCall
         every { mockCall.execute() } returns Response.success(cards)
 
-        val result = mockCardInterface.getCards(authHeader)?.execute()?.body()
+        val result = mockCardInterface.getCards(authHeader).execute().body()
         //println("testGetCards results:\n$result")
-        assertEquals("[Card(data=data1, product=Product(productId=1, productName=product_name1, productImageLink=image_path1, recommendedPrice=10, description=description1), amount=100.0, used=false, id=1), Card(data=data2, product=Product(productId=2, productName=product_name2, productImageLink=image_path2, recommendedPrice=20, description=description2), amount=200.0, used=true, id=2)]", "$result")
+        assertEquals(cards, result)
 
     }
     @Test
@@ -57,8 +58,7 @@ class CardInterfaceTest {
         every { mockCall.execute() } returns Response.success(card)
 
         val result = mockCardInterface.buyCard(productNumber, buyCardInfo, authHeader)?.execute()?.body()
-        assertEquals("Card(data=data, product=Product(productId=1, productName=product_name, productImageLink=image_path, recommendedPrice=10, description=description), amount=100.0, used=false, id=1)", "$result")
-
+        assertEquals(card, result)
     }
 
 }

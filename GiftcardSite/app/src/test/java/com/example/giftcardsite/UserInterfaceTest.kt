@@ -28,8 +28,7 @@ class UserInterfaceTest {
         val result = mockUserInterface.loginUser(loginInfo)?.execute()?.body()
         println("LoginUserTest results:\n$result")
 
-        assertEquals("User(username=username, token=token, email=email)", "$result")
-
+        assertEquals(user, result)
     }
 
     @Test
@@ -43,6 +42,6 @@ class UserInterfaceTest {
         val result = mockUserInterface.registerUser(registerInfo)?.execute()?.body()
         println("RegisterUserTest results:\n$result")
 
-        assertEquals("User(username=username, token=token, email=email)", "$result")
+        assertEquals(user, result)
     }
 }
