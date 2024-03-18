@@ -11,6 +11,7 @@ import android.hardware.SensorManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -47,7 +48,11 @@ class CardScrollingActivity : AppCompatActivity(), SensorEventListener, Location
         mAccel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
         setContentView(R.layout.activity_scrolling)
         setSupportActionBar(findViewById(R.id.toolbar))
-        loggedInUser = intent.getParcelableExtra<User>("User")
+        loggedInUser = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getParcelableExtra("User", User::class.java)
+        } else {
+            intent.getParcelableExtra<User>("User")
+        }
         var button : Button = findViewById<Button>(R.id.view_cards_button)
         button.text = "View Products"
         button.setOnClickListener {
