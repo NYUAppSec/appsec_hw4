@@ -47,6 +47,7 @@ class CardInterfaceTest {
         assertEquals(cards, result)
 
     }
+
     @Test
     fun testBuyCard() {
         val productNumber = 123

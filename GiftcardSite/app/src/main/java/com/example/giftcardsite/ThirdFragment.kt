@@ -47,7 +47,7 @@ class ThirdFragment : Fragment() {
                 GsonConverterFactory.create())
             var retrofit: Retrofit = builder.build()
             var client: UserInterface = retrofit.create(UserInterface::class.java)
-            var loggedInUser: User? = null;
+            var loggedInUser: User?
             var loginInfo = LoginInfo(username, password)
             client.loginUser(loginInfo)?.enqueue(object :
                 Callback<User?> {

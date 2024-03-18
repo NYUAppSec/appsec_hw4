@@ -1,6 +1,7 @@
 package com.example.giftcardsite
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -26,7 +27,12 @@ class GetCard : AppCompatActivity() {
         setContentView(R.layout.activity_get_card)
         setSupportActionBar(findViewById(R.id.toolbar))
         var image : CircleImageView = findViewById(R.id.image_view)
-        val product : Product? = intent.getParcelableExtra("Product")
+        val product : Product? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getParcelableExtra("Product", Product::class.java)
+        } else {
+            intent.getParcelableExtra<Product>("Product")
+        };
+
         findViewById<EditText>(R.id.amount).hint = product?.recommendedPrice.toString()
         Glide.with(this).asBitmap().load("http://appsec.moyix.net/" + product?.productImageLink).into(image)
         val productNumber : Int? = product?.productId
