@@ -105,6 +105,12 @@ To remain consistent with our other coding assignments, please complete the foll
   But I expect at a minimum to use Gradle to automatically test if your code can compile. 
 * Read this [document](https://docs.gradle.org/current/userguide/command_line_interface.html) to have a better understanding of what Gradle does.
 
+If you are using a self-hosted runner, you might need to add this to your GitHub Actions YAML file
+```
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v2
+```
+
 ### Submission
 If you’d like to submit this part, push the `hw4p1handin` tag with the following:
 
