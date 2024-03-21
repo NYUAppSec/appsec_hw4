@@ -287,7 +287,7 @@ To submit your code, please submit a file called `git_link.txt` that contains th
 For example, if your GitHub account username is exampleaccount, you would submit a text file named `git_link.txt` to 
 Gradescope with only one line that reads the following:
 
-    assignment-4-exampleaccount
+    appsec-homework-4-exampleaccount
 
 The auto-grader will automatically find your code and download it.
 
