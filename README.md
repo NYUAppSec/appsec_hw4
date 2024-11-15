@@ -12,7 +12,7 @@ git push
 
 ## Introduction
 
-Your organization has decided that they want to make an Android application
+Your organization has decided to make an Android application
 available for students who want to purchase NYU GiftCards. They took the liberty
 of hiring a contractor to create the application, but the code came back less
 useful than desired. Though your boss never told you which contracting company
@@ -45,8 +45,7 @@ We have prepared a visual walkthrough of the setup process on Mac (it should be
 very similar on Linux and Windows), which you can look through [here](https://imgur.com/a/noDTMNj)
 
 After installing Android Studio, you should import the project. You can do this
-from the "Welcome to Android Studio" window by clicking "More Actions" ->
-"Import Project (Gradle, Eclipse ADT, etc.)". This will open up a file chooser
+from the "Welcome to Android Studio" window than click "Open". This will open up a file chooser
 window. Navigate to the homework repository, and choose the `GiftcardSite`
 folder inside `appsec_hw4`. **Important: don't try to import a different folder; 
 it needs it to be the `GiftcardSite` so that Android Studio will recognize the project
@@ -56,7 +55,7 @@ The project should now load in the IDE. You may see a dialog window that asks if
 you want to "Trust Gradle Project?" - if so, answer yes. Now give the IDE a
 minute or two to go download the project dependencies and set up the build
 system. When it finishes, you should see the file pane on the left side of the
-IDE populated with entries like "app", "manifests", and "Gradle Scripts".
+IDE populated with entries like "app" and "Gradle Scripts".
 
 Next, you should set up the Android Emulator. To do this go to:
 
@@ -66,8 +65,15 @@ Tools->Device Manager
 
 This will open a new panel. In this panel, you should see a button that says:
 
+By default, it will have a virtual machine named "Medium Phone API 35".
+
+
+---
+<details>
+<summary>If you don't see any virtual device follow this guide.</summary>
+
 ```
-Create virtual device
+Click on + sign -> Create Virtual Device.
 ```
 
 Click this button. Another window will open asking you to choose a device. We
@@ -83,6 +89,10 @@ After downloading the image, the Android Virtual Device Manager will ask you to
 name the virtual device and select between Portrait or Landscape. Ensure
 Portrait is selected, leave Graphics at Automatic, and ensure Enable Device
 Frame is checked. Then click on the button labeled Finish.
+
+</details>
+
+---
 
 Note that the first time you run the Android Emulator it will take some time.
 The emulator will set up the device for you, so let it do its work.
