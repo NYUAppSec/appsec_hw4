@@ -39,7 +39,7 @@ https://developer.android.com/studio/
 **Unlike previous assignments, we recommend doing this on your Host Machine, not
 a Virtual Machine running Linux.** Android studio works for Windows, Linux, Mac,
 and Chrome OS, so most of your platforms should be covered. If you have a
-different platform than listed above, please reach out to your instructor or TA.
+different platform than listed above, please reach out to your instructor or CA.
 
 We have prepared a visual walkthrough of the setup process on Mac (it should be
 very similar on Linux and Windows), which you can look through [here](https://imgur.com/a/noDTMNj)
@@ -247,7 +247,7 @@ Part 4 is worth 0 points:
 * identify the cause of the vulnerability.
 * think about a potential solution.
 
-Part 5 is worth 30 points:
+Part 5 is worth 45 points:
 
 * 15 points for removing unneeded permissions.
 * 15 points for removing metric collection API calls.
