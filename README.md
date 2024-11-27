@@ -39,7 +39,7 @@ https://developer.android.com/studio/
 **Unlike previous assignments, we recommend doing this on your Host Machine, not
 a Virtual Machine running Linux.** Android studio works for Windows, Linux, Mac,
 and Chrome OS, so most of your platforms should be covered. If you have a
-different platform than listed above, please reach out to your instructor or TA.
+different platform than listed above, please reach out to your instructor or CA.
 
 We have prepared a visual walkthrough of the setup process on Mac (it should be
 very similar on Linux and Windows), which you can look through [here](https://imgur.com/a/noDTMNj)
@@ -128,8 +128,7 @@ functionality the app doesn't naively support, like Web browsing).
 Intents, when not handled correctly, can cause problems. Take a look at the code
 on lines 69 to 73 of SecondFragment.kt and lines 68 to 70 of ThirdFragment.kt.
 These are two different ways of handling intents. For this portion of the
-assignment, you should create a text file, called difference.txt, which answers
-the following questions in three sentences or fewer.
+assignment, you should review and answer the following questions for yourself. This will not be collected or graded, but it will help you understand important concepts related to this assignment.
 
 1. What are the two types of Intents?
 2. Which of these Intents are (generally) more secure?
@@ -138,15 +137,12 @@ the following questions in three sentences or fewer.
 5. Which of these two Intents is the proper way to do an Intent?
 
 As the last question above hinted, one of these two Intents is not correct.
-Fix the incorrect Intent, then in three sentences or fewer discuss in difference.txt
-which file you modified and why.
+Fix the incorrect Intent.
 
 ## Part 2.2: Shutting out the world
-It seems that the developers of the application wanted to allow other applications to use Intents to launch 
-the GiftCard application.
+It seems that the developers of the application wanted to allow other applications to use Intents to launch the GiftCard application.
 However, this isn't what your company wants. 
-At this moment, your company does not anticipate a need for other applications to
-use Intents to launch Activities within the GiftCard application.
+At this moment, your company does not anticipate a need for other applications to use Intents to launch Activities within the GiftCard application.
 
 For this part, you should remove the possibility of other applications using 
 Intents to launch activities of your application.
@@ -161,13 +157,7 @@ If you’d like to submit this part, push the `hw4p2handin` tag with the followi
 
 ## Part 3: Can you read me out there?
 
-Communication of data in transit is especially important. If communications are
-not secured in transit, then network adversaries can read confidential data such
-as passwords, or modify data in transit without a worry. Unfortunately, the
-developers of this application did not include any https encryption in calls to
-the REST API that it is using in the backend. For this part of the application,
-please secure all communication with the REST API using HTTPS. This modification
-will require changes to the following files:
+Communication of data in transit is especially important. If communications are not secured in transit, then network adversaries can read confidential data such as passwords, or modify data in transit without a worry. Unfortunately, the developers of this application did not include any https encryption in calls to the REST API that it is using in the backend. For this part of the application, please secure all communication with the REST API using HTTPS. This modification will require changes to the following files:
 
 1. SecondFragment.kt
 2. ThirdFragment.kt
@@ -180,9 +170,7 @@ will require changes to the following files:
 9. Reporter.kt
 10. strings.xml
 
-These changes should not be large. If you find yourself including new libraries,
-or writing more lines of code instead of just modifying code that already exists, 
-you are likely overthinking the problem. This one is not complicated!
+These changes should not be large. If you find yourself including new libraries, or writing more lines of code instead of just modifying code that already exists, you are likely overthinking the problem. This one is not complicated!
 
 ### Submission
 If you’d like to submit this part, push the `hw4p3handin` tag with the following:
@@ -193,10 +181,7 @@ If you’d like to submit this part, push the `hw4p3handin` tag with the followi
 
 ## Part 4: Oops, was that card yours?
 
-There exists a vulnerability in the REST API that allows users to GiftCards that
-do not belong to them. In a file called BUG.txt, explain why this vulnerability
-may be occurring, and how it can be fixed. Your explanation should be no larger
-than a paragraph.
+There exists a vulnerability in the REST API that allows users to GiftCards that do not belong to them. Think about why this vulnerability may be occurring, and how it can be fixed. You do not need to submit anything regarding your explanation, but this will help you understand important concepts.
 
 To get an idea of how the app uses the REST API to invoke the use card
 functionality, you can look at the following files:
@@ -206,21 +191,14 @@ functionality, you can look at the following files:
 
 Hints:
 
-* Think about how the application is telling the server which card to use, and how
-  that may be problematic.
-* You may want to try using `curl` (demoed in class) or the Python `requests`
-  library to interact with the API directly.
+* Think about how the application is telling the server which card to use, and how that may be problematic.
+* You may want to try using `curl` (demoed in class) or the Python `requests` library to interact with the API directly.
 
-**Note**: You do *not* need to actually fix the vulnerability. In fact, once
-you understand the vulnerability in detail, you should be able to see why it
-cannot be fixed just by changing the client-side code.
+**Note**: You do *not* need to actually fix the vulnerability. In fact, once you understand the vulnerability in detail, you should be able to see why it cannot be fixed just by changing the client-side code.
 
 ### Submission
-If you’d like to submit this part, push the `hw4p4handin` tag with the following:
+You do not need to submit anything for this portion of the assignment.
 
-    git tag -a -m "Completed hw4 part4." hw4p4handin
-    git push origin main
-    git push origin hw4p4handin
 
 ## Part 5: Privacy is Important
 
@@ -230,9 +208,7 @@ their devices at all times, and are unaware of the implications of granting a
 permission.
 
 In this section, your goal is to remove all privacy invasive code.
-This is done by removing all metric collecting code, all areas that needlessly interact with
-sensors, and all permissions that are not needed for the basic functionality of
-the application (buying, browsing, and using gift cards).
+This is done by removing all metric collecting code, all areas that needlessly interact with sensors, and all permissions that are not needed for the basic functionality of the application (buying, browsing, and using gift cards).
 
 You should remove all unnecessary code in (at least) the following files:
 
@@ -257,31 +233,29 @@ Part 1 is worth 10 points:
 * 5 points for at least one signed git commit
 * 5 points for using GitHub actions to confirm the Android code can compile
 
-Part 2 is worth 20 points:
+Part 2 is worth 25 points:
 
-* 5 points for answering the questions.
-* 5 points for fixing the correct intent.
-* 10 points for correcting the Manifest.
+* 10 points for fixing the correct intent.
+* 15 points for correcting the Manifest.
 
 Part 3 is worth 20 points:
 
 * 2 points for each file correctly modified to use HTTPS.
 
-Part 4 is worth 20 points:
+Part 4 is worth 0 points:
 
-* 10 points for identifying the cause of the vulnerability.
-* 10 points for describing a potential solution.
+* identify the cause of the vulnerability.
+* think about a potential solution.
 
-Part 5 is worth 30 points:
+Part 5 is worth 45 points:
 
-* 10 points for removing unneeded permissions.
-* 10 points for removing metric collection API calls.
-* 10 points for removing interaction with sensors.
+* 15 points for removing unneeded permissions.
+* 15 points for removing metric collection API calls.
+* 15 points for removing interaction with sensors.
 
 ## What to Submit
 
-The repository should contain all the files of the Android project, plus the
-text files BUG.txt and difference.txt.
+The repository should contain all the files of the Android project, write-ups are not required for this assignment.
 
 To submit your code, please submit a file called `git_link.txt` that contains the name of your repository. 
 For example, if your GitHub account username is exampleaccount, you would submit a text file named `git_link.txt` to 
@@ -291,15 +265,7 @@ Gradescope with only one line that reads the following:
 
 The auto-grader will automatically find your code and download it.
 
-The TA will also be looking for the following files on your Gradescope:
-* `difference.txt`
-* `BUG.txt`  
-Having the write-ups uploaded makes it easier for the TA to grade the write-up as it saves them time traversing your GitHub repository.
-Please be sure to have your written parts in your repository too.
-
 ## Concluding Remarks
 
 Despite the fixes you've made, there are almost certainly still many
-bugs lurking in the application, and the overall design of the application could
-be better done. With enough changes, this application could serve as a decent
-front-end for a REST API, but that API would also have to be audited.
+bugs lurking in the application, and the overall design of the application could be better done. With enough changes, this application could serve as a decent front-end for a REST API, but that API would also have to be audited.
