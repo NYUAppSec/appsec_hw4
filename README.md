@@ -37,12 +37,20 @@ https://developer.android.com/studio/
 ```
 
 **Unlike previous assignments, we recommend doing this on your Host Machine, not
-a Virtual Machine running Linux.** Android studio works for Windows, Linux, Mac,
-and Chrome OS, so most of your platforms should be covered. If you have a
-different platform than listed above, please reach out to your instructor or CA.
+a Virtual Machine running Linux.** Android Studio works for Windows, Linux, Mac,
+and Chrome OS, so most of your platforms should be covered. Android Studio is not supported to run on an
+Windows or Linux machine with an ARM architecture, an x86 CPU is required. For more details see [here](https://developer.android.com/studio/install).
+There is support for Android Studio on Macs with an Apple Chip (Ladybug onwards), see [here](https://developer.android.com/codelabs/basic-android-kotlin-compose-install-android-studio#4). Proof:
+
+![image](https://github.com/user-attachments/assets/75c6dc74-4183-4565-811e-dc815686a770)
+
+
+
+Making software work for your specific computer environment is very much part of the assignment.
 
 We have prepared a visual walkthrough of the setup process on Mac (it should be
-very similar on Linux and Windows), which you can look through [here](https://imgur.com/a/noDTMNj)
+very similar on Linux and Windows), which you can look through [here](https://imgur.com/a/noDTMNj).
+For those that use JetBrains for PyCharm and CLion, you can also install Android Studio via JetBrains Toolbox.
 
 After installing Android Studio, you should import the project. You can do this
 from the "Welcome to Android Studio" window by clicking "More Actions" ->
